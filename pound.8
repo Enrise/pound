@@ -356,18 +356,20 @@ Defines which HTTP verbs are accepted. The possible values are:
 (default) accept only standard HTTP requests (GET, POST, HEAD).
 .IP
 .I 1
-additionally allow extended HTTP requests (PUT, DELETE).
+allow all RFC2616 HTTP methods (GET, POST, HEAD, PUT, DELETE, OPTIONS, TRACE, CONNECT).
 .IP
-.I 2
-additionally allow standard WebDAV verbs (LOCK, UNLOCK, PROPFIND,
-PROPPATCH, SEARCH, MKCOL, MOVE, COPY, OPTIONS, TRACE, MKACTIVITY,
-CHECKOUT, MERGE, REPORT).
+.I 1
+allow all RFC2616 HTTP methods and the RFC5789 PATCH method (GET, POST, HEAD, PUT, DELETE, OPTIONS, TRACE, CONNECT, PATCH).
 .IP
 .I 3
-additionally allow MS extensions WebDAV verbs (SUBSCRIBE, UNSUBSCRIBE,
-NOTIFY, BPROPFIND, BPROPPATCH, POLL, BMOVE, BCOPY, BDELETE, CONNECT).
+additionally allow standard WebDAV verbs (LOCK, UNLOCK, PROPFIND,
+PROPPATCH, SEARCH, MKCOL, MOVE, COPY, MKACTIVITY, CHECKOUT, MERGE, REPORT).
 .IP
 .I 4
+additionally allow MS extensions WebDAV verbs (SUBSCRIBE, UNSUBSCRIBE,
+NOTIFY, BPROPFIND, BPROPPATCH, POLL, BMOVE, BCOPY, BDELETE).
+.IP
+.I 5
 additionally allow MS RPC extensions verbs (RPC_IN_DATA, RPC_OUT_DATA).
 .TP
 \fBClient\fR value
